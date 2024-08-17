@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnBackBookOrder"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@null"
+            android:textSize="20sp"
+            app:icon="@android:drawable/ic_menu_revert"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="30dp" />
+
+        <TextView
+            android:id="@+id/tvBookOrderTitle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Nhập sách"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etFindBookOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Nhập nội dung cần tìm..."
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnFindBookOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#0E63A6"
+            app:icon="@android:drawable/ic_menu_add"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="30dp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvBookOrders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/border_layout" />
+
+    <LinearLayout
+        android:id="@+id/layoutadd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_layout"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/etBookOrderId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="Mã phiếu nhập"
+            android:inputType="number" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etBookId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="Mã sách"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etBookName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="Tên sách"
+                android:inputType="none" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etSupplierId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="Mã nhà cung cấp"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etSupplierName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="Tên nhà cung cấp"
+                android:inputType="none" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etQuantityOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Số lượng nhập"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/etOrderDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="false"
+            android:hint="Ngày nhập"
+            android:inputType="date" />
+
+        <RadioGroup
+            android:id="@+id/rgIsStocked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioNotStocked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chưa nhập kho" />
+
+            <RadioButton
+                android:id="@+id/radioStocked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đã nhập kho" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAddBookOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#0E63A6"
+            android:text="Thêm" />
+
+        <Button
+            android:id="@+id/btnEditBookOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#0E63A6"
+            android:text="Sửa" />
+
+        <Button
+            android:id="@+id/btnDeleteBookOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#0E63A6"
+            android:text="Xóa" />
+
+        <Button
+            android:id="@+id/btnABC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#0E63A6"
+            android:textSize="16sp"
+            app:icon="@android:drawable/stat_notify_sync"
+            app:iconGravity="textEnd"
+            app:iconPadding="0dp"
+            app:iconSize="25dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">App TV</string>
+    <string-array name="image_names_avt">
+        <item>ic_logo</item>
+        <item>ic_thien</item>
+        <item>ic_cuc</item>
+        <item>ic_binh</item>
+        <item>ic_thuyha</item>
+        <item>ic_huyen</item>
+        <item>ic_huy</item>
+
+    </string-array>
+
+    <string-array name="image_names_book">
+        <item>ic_book</item>
+        <item>ic_laptrinhccoban</item>
+        <item>ic_java</item>
+        <item>ic_mangmaytinh</item>
+        <item>ic_trituenhantao</item>
+        <item>ic_anninhmang</item>
+        <item>ic_quantrinhanluc</item>
+        <item>ic_chienluocdoanhnghiep</item>
+        <item>ic_quantrichienluoc</item>
+        <item>ic_quantriduan</item>
+        <item>ic_huongdandulich</item>
+        <item>ic_diadanhvn</item>
+        <item>ic_lichsuvn</item>
+        <item>ic_vanhoavn</item>
+
+    </string-array>
+</resources>
